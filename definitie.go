@@ -11,8 +11,10 @@ type Definitie struct {
 }
 
 /*	TODO: Versiunea formatata a textului din reprezentarea interna a
+	Elimina tot ce este intre $, #, @ din text.
 	site-ului. De utilizat pentru display direct al continutului Text.
 */
 func (def *Definitie) format() string {
 	return def.Text
+	
 }
