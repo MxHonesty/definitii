@@ -19,7 +19,7 @@ type Definitie struct {
 	* Blankspace
 	* Mai mult de doua spatii inlantuite.
 */
-func (def *Definitie) formatContext() string {
+func (def *Definitie) FormatContext() string {
 	var expresie = regexp.MustCompile(`(@[^@]*@)|(#[^#]*#)|(\$[^$]*\$)`)  // Filtru formating
 	rez := expresie.ReplaceAllString(def.Text, "")
 
@@ -55,7 +55,7 @@ func (def *Definitie) formatContext() string {
 	* Blankspace
 	* Mai mult de doua spatii inlantuite.
 */
-func (def *Definitie) format() string {
+func (def *Definitie) Format() string {
 	var expresie = regexp.MustCompile(`[@#$&]`)  // Filtru formating
 	rez := expresie.ReplaceAllString(def.Text, "")
 
